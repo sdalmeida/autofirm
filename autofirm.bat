@@ -1,46 +1,46 @@
 @ECHO off
 :: Checking if all files are present
 IF NOT EXIST "nand.bin" (
-	echo nand.bin was out found!
-	echo Please place "nand.bin" in this folder
-	pause
-	exit /b 1
+    echo nand.bin was out found!
+    echo Please place "nand.bin" in this folder
+    pause
+    exit /b 1
 )
 IF NOT EXIST "source\firmwares\n3DS 11.1.bin" (
-	echo n3DS 11.1.bin was out found!
-	echo Please download it and place it in "source\firmwares\" folder
-	pause
-	exit /b 1
+    echo n3DS 11.1.bin was out found!
+    echo Please download it and place it in "source\firmwares\" folder
+    pause
+    exit /b 1
 )
 IF NOT EXIST "source\firmwares\n3DS 11.0.bin" (
-	echo n3DS 11.0.bin was out found!
-	echo Please download it and place it in source\firmwares\ folder
-	pause
-	exit /b 1
+    echo n3DS 11.0.bin was out found!
+    echo Please download it and place it in source\firmwares\ folder
+    pause
+    exit /b 1
 )
 IF NOT EXIST "source\firmwares\n3DS 10.4.bin" (
-	echo n3DS 10.4.bin was out found!
-	echo Please download it and place it in source\firmwares\ folder
-	pause
-	exit /b 1
+    echo n3DS 10.4.bin was out found!
+    echo Please download it and place it in source\firmwares\ folder
+    pause
+    exit /b 1
 )
 IF NOT EXIST "source\firmwares\o3DS 11.1.bin" (
-	echo o3DS 11.1.bin was out found!
-	echo Please download it and place it in source\firmwares\ folder
-	pause
-	exit /b 1
+    echo o3DS 11.1.bin was out found!
+    echo Please download it and place it in source\firmwares\ folder
+    pause
+    exit /b 1
 )
 IF NOT EXIST "source\firmwares\o3DS 11.0.bin" (
-	echo o3DS 11.0.bin was out found!
-	echo Please download it and place it in source\firmwares\ folder
-	pause
-	exit /b 1
+    echo o3DS 11.0.bin was out found!
+    echo Please download it and place it in source\firmwares\ folder
+    pause
+    exit /b 1
 )
 IF NOT EXIST "source\firmwares\o3DS 10.4.bin" (
-	echo o3DS 10.4.bin was out found!
-	echo Please download it and place it in source\firmwares\ folder
-	pause
-	exit /b 1
+    echo o3DS 10.4.bin was out found!
+    echo Please download it and place it in source\firmwares\ folder
+    pause
+    exit /b 1
 )
 ECHO.
 ECHO    ----------------------------------
@@ -82,19 +82,19 @@ ECHO.
 ECHO.      
 SET /p option= Please enter one of the options:
 IF "%option%"=="1" (
-	SET firm0="source\firmwares\o3DS 11.0.bin"
-	SET firm1="source\firmwares\o3DS 10.4.bin"
+    SET firm0="source\firmwares\o3DS 11.0.bin"
+    SET firm1="source\firmwares\o3DS 10.4.bin"
 ) ELSE IF "%option%"=="2" (
-	SET firm0="source\firmwares\o3DS 11.1.bin"
-	SET firm1="source\firmwares\o3DS 10.4.bin"
+    SET firm0="source\firmwares\o3DS 11.1.bin"
+    SET firm1="source\firmwares\o3DS 10.4.bin"
 ) ELSE IF "%option%"=="3" (
-	SET firm0="source\firmwares\n3DS 11.0.bin"
-	SET firm1="source\firmwares\n3DS 10.4.bin"
+    SET firm0="source\firmwares\n3DS 11.0.bin"
+    SET firm1="source\firmwares\n3DS 10.4.bin"
 ) ELSE IF "%option%"=="4" (
-	SET firm0="source\firmwares\n3DS 11.1.bin"
-	SET firm1="source\firmwares\n3DS 10.4.bin"
+    SET firm0="source\firmwares\n3DS 11.1.bin"
+    SET firm1="source\firmwares\n3DS 10.4.bin"
 ) ELSE (
-	exit /b 1
+    exit /b 1
 )
 cls
 ECHO Creating a backup copy of the nand.bin file...
@@ -152,17 +152,17 @@ exit
 
 :error
     cls
-	ECHO [** Error! **] >> log.txt
-	ECHO.
-	ECHO    ----------------------------------
-	ECHO    *  3DS AUTOFIRM - GUIDE EDITION  *
-	ECHO    ----------------------------------
-	ECHO.
-	ECHO.
-	ECHO    Something went wrong! Do not flash "nand_patched.bin" to your system!
-	ECHO    If you do, your system will be bricked!
-	ECHO    Please look at the "log.txt" file to see where the error occured!
-	ECHO    If you need help, go to "gbatemp.net" and include the "log.txt" file.
-	ECHO.
-	pause
-	exit
+    ECHO [** Error! **] >> log.txt
+    ECHO.
+    ECHO    ----------------------------------
+    ECHO    *  3DS AUTOFIRM - GUIDE EDITION  *
+    ECHO    ----------------------------------
+    ECHO.
+    ECHO.
+    ECHO    Something went wrong! Do not flash "nand_patched.bin" to your system!
+    ECHO    If you do, your system will be bricked!
+    ECHO    Please look at the "log.txt" file to see where the error occured!
+    ECHO    If you need help, go to "gbatemp.net" and include the "log.txt" file.
+    ECHO.
+    pause
+    exit
