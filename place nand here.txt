@@ -1,0 +1,10 @@
+*******
+3DSFirmtool
+*******
+
+Firm0 with this name and path already exists, file will be overwritten
+Firm1 with this name and path already exists, file will be overwritten
+Dumping... please wait
+
+Finished
+"Error" 
