@@ -2,5 +2,3 @@
 nand.bin
 nand_patched.bin
 log.txt
-source/firmwares/*.bin
-source/tmp/*
