@@ -94,7 +94,7 @@ ren source\tmp\firm0.bin.out.out firm0new.bin
 ren source\tmp\firm1.bin.out.out firm1new.bin
 ECHO [** Success! **] >> log.txt
 ECHO [** Running final 3DSFirm.exe **] >> log.txt
-source\3DSFirm.exe -i nand.bin source\tmp\firm0new.bin source\tmp\firm1new.bin >> log.txt
+source\3DSFirm.exe -i source\nand.bin source\tmp\firm0new.bin source\tmp\firm1new.bin >> log.txt
 IF ERRORLEVEL 1 GOTO error
 ECHO [** Success! **] >> log.txt
 move /Y source\nand.bin nand_patched.bin
