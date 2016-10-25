@@ -1,9 +1,0 @@
-Please use the following format:
-
-n3DS 11.1.bin
-n3DS 11.0.bin
-n3DS 10.4.bin
-
-o3DS 11.1.bin
-o3DS 11.0.bin
-o3DS 10.4.bin

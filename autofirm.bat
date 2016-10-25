@@ -1,74 +1,40 @@
 @ECHO off
 :: Checking if all files are present
 IF NOT EXIST "nand.bin" (
+    color 4
     echo nand.bin was out found!
     echo Please place "nand.bin" in this folder
     pause
     exit /b 1
 )
-IF NOT EXIST "source\firmwares\n3DS 11.1.bin" (
-    echo n3DS 11.1.bin was out found!
-    echo Please download it and place it in "source\firmwares\" folder
-    pause
-    exit /b 1
-)
-IF NOT EXIST "source\firmwares\n3DS 11.0.bin" (
-    echo n3DS 11.0.bin was out found!
-    echo Please download it and place it in source\firmwares\ folder
-    pause
-    exit /b 1
-)
-IF NOT EXIST "source\firmwares\n3DS 10.4.bin" (
-    echo n3DS 10.4.bin was out found!
-    echo Please download it and place it in source\firmwares\ folder
-    pause
-    exit /b 1
-)
-IF NOT EXIST "source\firmwares\o3DS 11.1.bin" (
-    echo o3DS 11.1.bin was out found!
-    echo Please download it and place it in source\firmwares\ folder
-    pause
-    exit /b 1
-)
-IF NOT EXIST "source\firmwares\o3DS 11.0.bin" (
-    echo o3DS 11.0.bin was out found!
-    echo Please download it and place it in source\firmwares\ folder
-    pause
-    exit /b 1
-)
-IF NOT EXIST "source\firmwares\o3DS 10.4.bin" (
-    echo o3DS 10.4.bin was out found!
-    echo Please download it and place it in source\firmwares\ folder
-    pause
-    exit /b 1
-)
+color 3
 ECHO.
-ECHO    ----------------------------------
-ECHO    *  3DS AUTOFIRM - GUIDE EDITION  *
-ECHO    ----------------------------------
+ECHO                        ----------------------------------
+ECHO                        *  3DS AUTOFIRM - GUIDE EDITION  *
+ECHO                        ----------------------------------
 ECHO.
 ECHO.
 ECHO    INSTRUCTIONS:
 ECHO.
-ECHO  - NAND.BIN file should be in the same folder of this .bat
-ECHO    You can extract it from your 3DS via a hardmod.
+ECHO  - NAND.BIN file should be in the same folder as this .bat
+ECHO    You can extract it from your 3DS/2DS via a hardmod.
 ECHO    Hardmod Guide: https://gbatemp.net/threads/414498/
 ECHO.
-ECHO  - All decrypted NATIVE-FIRMs should be in the "source\firmwares\" folder.
+ECHO  - Decrypted NATIVE-FIRMs should be in the "source\firmwares\" folder.
 ECHO    You can download the files from https://git.io/vo5OS
 ECHO.
 ECHO.
 ECHO.
-ECHO Press a button only when you are sure that everything's ready
+ECHO Press any button only when you are sure that everything's ready
 pause
 cls
 ECHO.
-ECHO    ----------------------------------
-ECHO    *  3DS AUTOFIRM - GUIDE EDITION  *
-ECHO    ----------------------------------
+ECHO                        ----------------------------------
+ECHO                        *  3DS AUTOFIRM - GUIDE EDITION  *
+ECHO                        ----------------------------------
 ECHO.
 ECHO.
-ECHO    SELECT YOUR 3DS MODEL AND VERSION:
+ECHO    SELECT YOUR 3DS/2DS MODEL AND VERSION:
 ECHO.
 ECHO  1) 11.0.0 - OLD 3DS/XL or 2DS
 ECHO. 
@@ -80,7 +46,7 @@ ECHO  4) 11.1.0 - NEW 3DS/XL
 ECHO.    
 ECHO.    
 ECHO.      
-SET /p option= Please enter one of the options:
+SET /p option= Please enter one of the options: 
 IF "%option%"=="1" (
     SET firm0="source\firmwares\o3DS 11.0.bin"
     SET firm1="source\firmwares\o3DS 10.4.bin"
@@ -97,6 +63,9 @@ IF "%option%"=="1" (
     exit /b 1
 )
 cls
+IF NOT EXIST %firm0% (
+    goto firmError
+)
 ECHO Creating a backup copy of the nand.bin file...
 copy nand.bin source\nand.bin
 ECHO Done.
@@ -127,15 +96,15 @@ ECHO [** Success! **] >> log.txt
 ECHO [** Running final 3DSFirm.exe **] >> log.txt
 source\3DSFirm.exe -i nand.bin source\tmp\firm0new.bin source\tmp\firm1new.bin >> log.txt
 IF ERRORLEVEL 1 GOTO error
-ECHO "[** Success! **] >> log.txt
-move source\nand.bin nand_patched.bin
-del /F /Q source\tmp\*
+ECHO [** Success! **] >> log.txt
+move /Y source\nand.bin nand_patched.bin
+del /F /Q source\tmp\*.bin*
 ECHO [** Temp files deleted **] >> log.txt
 cls
 ECHO.
-ECHO    ----------------------------------
-ECHO    *  3DS AUTOFIRM - GUIDE EDITION  *
-ECHO    ----------------------------------
+ECHO                        ----------------------------------
+ECHO                        *  3DS AUTOFIRM - GUIDE EDITION  *
+ECHO                        ----------------------------------
 ECHO.
 ECHO.
 ECHO    A patched "NAND.BIN" file has been generated.
@@ -151,12 +120,13 @@ pause
 exit
 
 :error
+    color 4
     cls
     ECHO [** Error! **] >> log.txt
     ECHO.
-    ECHO    ----------------------------------
-    ECHO    *  3DS AUTOFIRM - GUIDE EDITION  *
-    ECHO    ----------------------------------
+    ECHO                        ----------------------------------
+    ECHO                        *  3DS AUTOFIRM - GUIDE EDITION  *
+    ECHO                        ----------------------------------
     ECHO.
     ECHO.
     ECHO    Something went wrong! Do not flash "nand_patched.bin" to your system!
@@ -165,4 +135,22 @@ exit
     ECHO    If you need help, go to "gbatemp.net" and include the "log.txt" file.
     ECHO.
     pause
-    exit
+    exit /b 1
+
+:firmError
+    color 4
+    cls
+    ECHO [** Error! %firm0% doesn't exist! **] >> log.txt
+    ECHO.
+    ECHO                        ----------------------------------
+    ECHO                        *  3DS AUTOFIRM - GUIDE EDITION  *
+    ECHO                        ----------------------------------
+    ECHO.
+    ECHO.
+    ECHO    I could not find FIRM file %firm0%!
+    ECHO    Do not flash "nand_patched.bin" to your system!
+    ECHO    If you do, your system will be bricked!
+    ECHO    Please download the necessary FIRM file from: https://git.io/vo5OS
+    ECHO.
+    pause
+    exit /b 1
