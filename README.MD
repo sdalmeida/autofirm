@@ -1,6 +1,7 @@
 #### autofirm - Guide Edition
 
-A tool for swapping a NAND backup's firmware using the "FIRM partitions known-plaintext" exploit detailed [here](https://www.3dbrew.org/wiki/3DS_System_Flaws).
+A tool for swapping a NAND backup's firmware using the "FIRM partitions known-plaintext" exploit detailed [here](https://www.3dbrew.org/wiki/3DS_System_Flaws). <br />
+Now with validation!
 
 ## Instructions
 
