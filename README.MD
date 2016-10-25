@@ -9,7 +9,9 @@ https://github.com/Plailect/Guide/wiki/Hardmod-Downgrade
 ## Firm files
 
 Decryped FIRM files can be found [here] (https://git.io/vo5OS)
+
 Please place decrypted FIRM files under "**\source\firmwares\**" folder.
+
 Make sure the "**File Name**" and "**Hash**" matches the following:
 
 | File name       | MD5 HASH                             | SHA-256 HASH                                                         |
