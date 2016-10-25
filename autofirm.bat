@@ -37,28 +37,38 @@ ECHO.
 ECHO    SELECT YOUR 3DS/2DS MODEL AND VERSION:
 ECHO.
 ECHO  1) 11.0.0 - OLD 3DS/XL or 2DS
-ECHO. 
+ECHO.
 ECHO  2) 11.1.0 - OLD 3DS/XL or 2DS
 ECHO.
-ECHO  3) 11.0.0 - NEW 3DS/XL
-ECHO.   
-ECHO  4) 11.1.0 - NEW 3DS/XL
-ECHO.    
-ECHO.    
-ECHO.      
-SET /p option= Please enter one of the options: 
+ECHO. 3) 11.2.0 - OLD 3DS/XL or 2DS
+ECHP.
+ECHO  4) 11.0.0 - NEW 3DS/XL
+ECHO.
+ECHO  5) 11.1.0 - NEW 3DS/XL
+ECHO.
+ECHO  6) 11.1.0 - NEW 3DS/XL
+ECHO.
+ECHO.
+ECHO.
+SET /p option= Please enter one of the options:
 IF "%option%"=="1" (
-    SET firm0="source\firmwares\o3DS 11.0.bin"
-    SET firm1="source\firmwares\o3DS 10.4.bin"
+    SET firm0="source\firmwares\firm110_OLD.bin"
+    SET firm1="source\firmwares\firm104_OLD.bin"
 ) ELSE IF "%option%"=="2" (
-    SET firm0="source\firmwares\o3DS 11.1.bin"
-    SET firm1="source\firmwares\o3DS 10.4.bin"
+    SET firm0="source\firmwares\firm111_OLD.bin"
+    SET firm1="source\firmwares\firm104_old.bin"
 ) ELSE IF "%option%"=="3" (
-    SET firm0="source\firmwares\n3DS 11.0.bin"
-    SET firm1="source\firmwares\n3DS 10.4.bin"
+    SET firm0="source\firmwares\firm112_OLD.bin"
+    SET firm1="source\firmwares\firm104_OLD.bin"
 ) ELSE IF "%option%"=="4" (
-    SET firm0="source\firmwares\n3DS 11.1.bin"
-    SET firm1="source\firmwares\n3DS 10.4.bin"
+    SET firm0="source\firmwares\firm110_NEW.bin"
+    SET firm1="source\firmwares\firm104_NEW.bin"
+) ELSE IF "%option%"=="5" (
+    SET firm0="source\firmwares\firm111_NEW.bin"
+    SET firm1="source\firmwares\firm104_NEW.bin"
+) ELSE IF "%option%"=="6" (
+    SET firm0="source\firmwares\firm112_NEW.bin"
+    SET firm1="source\firmwares\firm104_NEW.bin"
 ) ELSE (
     exit /b 1
 )
