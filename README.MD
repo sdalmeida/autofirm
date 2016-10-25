@@ -8,18 +8,18 @@ https://github.com/Plailect/Guide/wiki/Hardmod-Downgrade
 
 ## Firm files
 
-Decryped FIRM files can be found [here] (https://git.io/vo5OS)
-Please place decrypted FIRM files under "**\source\firmwares\**" folder.
+Decryped FIRM files can be found [here] (https://git.io/vo5OS) <br/>
+Please place decrypted FIRM files under "**\source\firmwares\**" folder. <br/>
 Make sure the "**File Name**" and "**Hash**" matches the following:
 
-| File name       | MD5 HASH                             | SHA-256 HASH                                                         |
-| --------------- | ------------------------------------ | -------------------------------------------------------------------- |
-| "n3DS 11.1.bin" | **EE31E3264F053AD593532045C1E25D9F** | **A49692960616442F3C6962E74D2CE0D83360A26F812B2B000C00846884E45160** |
-| "n3DS 11.0.bin" | **0381E3928FE273FA9920A1EDF448C353** | **968F5F9A7E444E1CBAA3057147E0D54789A791E3295922CE646AB91914484063** |
-| "n3DS 10.4.bin" | **D50A72F2AB76CDEA2B458AA23CF42B46** | **B7585270B38EA453670CBB967B6FA6D05AB4E07B2BABFAD4E7D78F42E280A2E6** |
-| "o3DS 11.1.bin" | **8163B032B5710258AE5F1135A37617C8** | **03DCCE244FD203319E0802CF022DB67BB6C2EC08B6A15C01296C0C289705BE37** |
-| "o3DS 11.0.bin" | **C0F6E5EC681F8B953350AAC967916CA5** | **1FA79F9A575606FC70C49A71B37DE55CACB4B808AD79C982ED93FE31685D39B1** |
-| "o3DS 10.4.bin" | **4AE0D867A94EC1BB3249362D329D8C85** | **578BA58A19502CF62D887C80BFF1D207BE038E5C1B3CAD5B3306790381239A07** |
+| File name       | SHA-256 HASH                                                         |
+| --------------- | -------------------------------------------------------------------- |
+| "n3DS 11.1.bin" | **A49692960616442F3C6962E74D2CE0D83360A26F812B2B000C00846884E45160** |
+| "n3DS 11.0.bin" | **968F5F9A7E444E1CBAA3057147E0D54789A791E3295922CE646AB91914484063** |
+| "n3DS 10.4.bin" | **B7585270B38EA453670CBB967B6FA6D05AB4E07B2BABFAD4E7D78F42E280A2E6** |
+| "o3DS 11.1.bin" | **03DCCE244FD203319E0802CF022DB67BB6C2EC08B6A15C01296C0C289705BE37** |
+| "o3DS 11.0.bin" | **1FA79F9A575606FC70C49A71B37DE55CACB4B808AD79C982ED93FE31685D39B1** |
+| "o3DS 10.4.bin" | **578BA58A19502CF62D887C80BFF1D207BE038E5C1B3CAD5B3306790381239A07** |
 
 You can get either MD5 or SHA-256 hash of your files online [here] (https://md5file.com/calculator) (It's super fast!)
 
