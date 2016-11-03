@@ -5,7 +5,7 @@ A tool for swapping a NAND backup's firmware using the "FIRM partitions known-pl
 
 ## Instructions
 
-https://github.com/Plailect/Guide/wiki/Hardmod-Downgrade
+https://plailect.github.io/Guide/hardmod-downgrade
 
 ## Firm files
 
