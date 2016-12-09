@@ -15,7 +15,7 @@ Make sure the "**File Name**" and "**Hash**" matches the following:
 
 | File name       | SHA-256 HASH                                                         |
 | --------------- | -------------------------------------------------------------------- |
-| "firm112_NEW.bin" | **04623caa015b46a557894e4693992252b7a45414f2cbcbd4b23a89bbe417c0ff** |
+| "firm112_NEW.bin" | **30E97727D78F1C3129E370622CE07894489765FFA272C67FC10AD8F4D1E41735** |
 | "firm111_NEW.bin" | **A49692960616442F3C6962E74D2CE0D83360A26F812B2B000C00846884E45160** |
 | "firm110_NEW.bin" | **968F5F9A7E444E1CBAA3057147E0D54789A791E3295922CE646AB91914484063** |
 | "firm104_NEW.bin" | **B7585270B38EA453670CBB967B6FA6D05AB4E07B2BABFAD4E7D78F42E280A2E6** |
